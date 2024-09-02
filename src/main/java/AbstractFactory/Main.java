@@ -20,6 +20,8 @@ public class Main {
         buttonA.setText("Cancel");
         buttonA.display();
 
+        textFieldB.setText("Type here");
+
         buttonB.display();
         textFieldB.display();
         checkboxB.display();
