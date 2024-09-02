@@ -15,12 +15,10 @@ public class Employee extends Organization {
 
     @Override
     public void add(Organization organization) {
-        throw new UnsupportedOperationException("Cannot add to an employee");
     }
 
     @Override
     public void remove(Organization organization) {
-        throw new UnsupportedOperationException("Cannot remove from an employee");
     }
 
     @Override

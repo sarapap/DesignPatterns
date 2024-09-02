@@ -12,7 +12,11 @@ public class Department extends Organization {
 
     @Override
     public double getSalary() {
-        return organizations.stream().mapToDouble(Organization::getSalary).sum();
+        double totalSalary = 0;
+        for (Organization salary : organizations) {
+            totalSalary += salary.getSalary();
+        }
+        return totalSalary;
     }
 
     @Override

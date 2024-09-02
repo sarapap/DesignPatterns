@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Department department = new Department("Head Office");
 
-        Department department2 = new Department("HR Department");
-        Department department3 = new Department("IT Department");
+        Department department2 = new Department("IT Department");
+        Department department3 = new Department("Random Department");
 
         Employee emp1 = new Employee("Sara", 5000);
         Employee emp2 = new Employee("Pekka", 6000);
