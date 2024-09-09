@@ -9,7 +9,7 @@ public class Logger {
 
     private Logger() {
         try {
-            writer = new FileWriter("log.txt", true);
+            writer = new FileWriter("log.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,7 +27,7 @@ public class Logger {
             writer.close();
         }
         try {
-            writer = new FileWriter(fileName, true);
+            writer = new FileWriter(fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
