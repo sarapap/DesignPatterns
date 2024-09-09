@@ -2,16 +2,16 @@ package Observer;
 
 public class Main {
     public static void main(String[] args) {
-        WeatherStation station = new WeatherStation();
-        station.start();
+        WeatherStation weatherStation = new WeatherStation();
+        weatherStation.start();
 
         WeatherObserver observer1 = new WeatherObserver("Observer 1");
         WeatherObserver observer2 = new WeatherObserver("Observer 2");
         WeatherObserver observer3 = new WeatherObserver("Observer 3");
 
-        station.registerObserver(observer1);
-        station.registerObserver(observer2);
-        station.registerObserver(observer3);
+        weatherStation.registerObserver(observer1);
+        weatherStation.registerObserver(observer2);
+        weatherStation.registerObserver(observer3);
 
         try {
             Thread.sleep(10000);
@@ -19,7 +19,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        station.removeObserver(observer2);
+        weatherStation.removeObserver(observer2);
         System.out.println("Observer 2 removed.");
 
         try {
@@ -28,7 +28,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        station.stop();
+        weatherStation.stop();
         System.out.println("Weather station simulation done.");
     }
 }

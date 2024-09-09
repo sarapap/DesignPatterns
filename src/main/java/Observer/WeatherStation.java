@@ -7,16 +7,15 @@ public class WeatherStation {
     private final WeatherObserverList observers;
 
     public WeatherStation() {
-        temperature = (int) (Math.random() * 41) - 10; // -10 to 30
+        temperature = (int) (Math.random() * 41) - 10; // -10 - 30 astetta
         running = false;
         observers = new WeatherObserverList();
 
         thread = new Thread(() -> {
             while (running) {
                 try {
-                    Thread.sleep((int) (Math.random() * 4000 + 1000));
+                    Thread.sleep((int) (Math.random() * 4000 + 1000)); // 1-5 sekuntia
                 } catch (InterruptedException e) {
-                    System.out.println("Weather Station interrupted.");
                     return;
                 }
 
