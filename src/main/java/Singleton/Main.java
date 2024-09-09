@@ -1,12 +1,14 @@
 package Singleton;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Logger logger = Logger.getInstance();
-        logger.setFileName("jokuUuss.txt");
-        logger.write("Simulation started");
-        logger.write("Processing data...");
-        logger.write("Simulation finished");
+        logger.setFileName("newFile.txt");
+        logger.write("\nSimulation started");
+        logger.write("\nProcessing data...");
+        logger.write("\nSimulation finished");
         logger.close();
     }
 }

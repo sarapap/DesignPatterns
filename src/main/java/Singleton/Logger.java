@@ -2,43 +2,42 @@ package Singleton;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class Logger {
     private static Logger instance;
-    private PrintWriter writer;
+    private FileWriter writer;
 
     private Logger() {
         try {
-            writer = new PrintWriter(new FileWriter("Mika.txt", true));
+            writer = new FileWriter("log.txt", true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static synchronized Logger getInstance() {
+    public static Logger getInstance() {
         if (instance == null) {
             instance = new Logger();
         }
         return instance;
     }
 
-    public void setFileName(String fileName) {
+    public void setFileName(String fileName) throws IOException {
         if (writer != null) {
             writer.close();
         }
         try {
-            writer = new PrintWriter(new FileWriter(fileName, true));
+            writer = new FileWriter(fileName, true);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void write(String message) {
-        writer.println(message);
+    public void write(String message) throws IOException {
+        writer.write(message);
     }
 
-    public void close() {
+    public void close() throws IOException {
         writer.close();
     }
 }
