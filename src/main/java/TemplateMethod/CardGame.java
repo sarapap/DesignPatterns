@@ -10,7 +10,7 @@ public class CardGame extends Game {
 
     @Override
     public void initializeGame(int numberOfPlayers) {
-        System.out.println("Tässä pelissä voittaja on se, joka nostaa isomman kortin.");
+        System.out.println("Tässä pelissä voittaja on se, joka nostaa isomman kortin.\n");
         cards = new Deck();
         player1Wins = 0;
         player2Wins = 0;
@@ -36,10 +36,10 @@ public class CardGame extends Game {
         rounds++;
         if (player1 > player2) {
             player1Wins++;
-            System.out.println("Pelaaja 1 voitti kierroksen!");
+            System.out.println("Pelaaja 1 voitti kierroksen!\n");
         } else if (player1 < player2) {
             player2Wins++;
-            System.out.println("Pelaaja 2 voitti kierroksen!");
+            System.out.println("Pelaaja 2 voitti kierroksen!\n");
         } else {
             System.out.println("Tasapeli!");
         }
@@ -47,7 +47,7 @@ public class CardGame extends Game {
 
     @Override
     public void displayWinner() {
-        System.out.println("Peli on päättynyt.");
+        System.out.println("\nPeli on päättynyt.");
 
         if (player1 > player2) {
             System.out.println("Pelaaja 1 voitti pelin! Tämä pelaaja voitti enemmän kierroksia.");
