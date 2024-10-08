@@ -3,12 +3,12 @@ package ChainOfResponsibility;
 public class Message {
     private MessageType messageType;
     private String message;
-    private String sender;
+    private String senderEmail;
 
-    public Message(MessageType messageType, String message, String sender) {
+    public Message(MessageType messageType, String message, String senderEmail) {
         this.messageType = messageType;
         this.message = message;
-        this.sender = sender;
+        this.senderEmail = senderEmail;
     }
 
     public MessageType getMessageType() {
@@ -19,7 +19,7 @@ public class Message {
         return message;
     }
 
-    public String getSender() {
-        return sender;
+    public String getSenderEmail() {
+        return senderEmail;
     }
 }
